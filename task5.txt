@@ -1,0 +1,187 @@
+console.log("**************************************************************************************");
+console.log("1) Anonymous Functions");
+console.log("**************************************************************************************");
+console.log("a)Print Odd Numbers in an array");
+let res_a=function(){
+    let a1=[1,2,3,4,5,6,7,8,9,10];
+for (let i=0;i<a1.length;i++)
+{
+    if(a1[i]%2!=0)
+    {
+        console.log(a1[i]);
+    }
+}
+};
+res_a();
+console.log("**************************************************************************************");
+console.log("b)Convert all the strings to title caps in a string array");
+let res_b=function(){
+    let b1=['one','two','three','four','five'];
+for (let i=0;i<b1.length;i++)
+{
+    b1[i] = b1[i][0].toUpperCase() + b1[i].slice(1);
+    console.log(b1[i]);
+}
+};
+res_b();
+console.log("**************************************************************************************");
+console.log("c)Sum Of all numbers in array");
+let res_c=function(){
+    let c1=[10,20,30,40,50,60,70,80,90,100];
+    let sum=0;
+for (let i=0;i<c1.length;i++)
+{
+    sum+=c1[i];
+    
+}
+console.log(sum);
+};
+res_c();
+console.log("**************************************************************************************");
+console.log("d)Prime numbers in array");
+let res_d=function(){
+let d1=[1,2,3,4,5,6,7,8,9,10]; 
+    for (let i=0;i<d1.length;i++)
+    {
+        let count_d=0;
+        for (let j = 1; j<=i; j++) 
+        {
+            if (d1[i]% j == 0) {
+                count_d++;
+            }
+        }
+        if(count_d<=1 || d1[i]==1)
+        {
+            console.log(d1[i]);
+        }
+    }
+};
+res_d();
+console.log("**************************************************************************************");
+console.log("e)Return all Palindrome in array");
+let res_e=function(){
+let e1=['madam','sky','noon']; 
+    for (let i=0;i<e1.length;i++)
+    {
+        if (e1[i]==e1[i].split('').reverse().join(''))
+        {
+            console.log(e1[i]);
+        }
+    }
+};
+res_e();
+console.log("**************************************************************************************");
+console.log("f)Median of two sorted array");
+let res_f=function(){
+let f1=[4,3,1,5,2]; 
+let f2=[8,7,6,9,10]; 
+let f3=[...f1,...f2].sort((a,b)=>(a-b));
+let res_f1="";
+console.log(f3);
+
+const half = f3.length / 2 | 0;
+    
+//If odd then return middle element
+if (f3.length % 2) 
+{
+    res_f1=f3[half];
+}
+else
+{
+    res_f1= (f3[half] + f3[half - 1]) / 2;
+}  
+console.log(res_f1); 
+};
+res_f();
+console.log("**************************************************************************************");
+console.log("g)Remove duplicates in array");
+let res_g=function(){
+let g=[4,3,1,5,2,5,1,4,3]; 
+let g1=[...new Set(g)];
+console.log(g1);
+};
+res_g();
+console.log("**************************************************************************************");
+console.log("h)Rotate an array by K times");
+let res_h=function(){
+let h=[4,3,1,5,2]; 
+let k=1;
+let h1=h.map((e, i) => h[h.length-i-1]);
+console.log(h1);
+};
+res_h();
+
+
+
+console.log("**************************************************************************************");
+console.log("3) Arrow Functions");
+console.log("**************************************************************************************");
+console.log("a)Print Odd Numbers in an array");
+let arr_a=()=>{
+    let a1=[1,2,3,4,5,6,7,8,9,10];
+for (let i=0;i<a1.length;i++)
+{
+    if(a1[i]%2!=0)
+    {
+        console.log(a1[i]);
+    }
+}
+};
+arr_a();
+console.log("**************************************************************************************");
+console.log("b)Convert all the strings to title caps in a string array");
+let arr_b=()=>{
+    let b1=['one','two','three','four','five'];
+for (let i=0;i<b1.length;i++)
+{
+    b1[i] = b1[i][0].toUpperCase() + b1[i].slice(1);
+    console.log(b1[i]);
+}
+};
+arr_b();
+console.log("**************************************************************************************");
+console.log("c)Sum Of all numbers in array");
+let arr_c=()=>{
+    let c1=[10,20,30,40,50,60,70,80,90,100];
+    let sum=0;
+for (let i=0;i<c1.length;i++)
+{
+    sum+=c1[i];
+    
+}
+console.log(sum);
+};
+arr_c();
+console.log("**************************************************************************************");
+console.log("d)Prime numbers in array");
+let arr_d=()=>{
+let d1=[1,2,3,4,5,6,7,8,9,10]; 
+    for (let i=0;i<d1.length;i++)
+    {
+        let count_d=0;
+        for (let j = 1; j<=i; j++) 
+        {
+            if (d1[i]% j == 0) {
+                count_d++;
+            }
+        }
+        if(count_d<=1 || d1[i]==1)
+        {
+            console.log(d1[i]);
+        }
+    }
+};
+arr_d();
+console.log("**************************************************************************************");
+console.log("e)Return all Palindrome in array");
+let arr_e=()=>{
+let e1=['madam','sky','noon']; 
+    for (let i=0;i<e1.length;i++)
+    {
+        if (e1[i]==e1[i].split('').reverse().join(''))
+        {
+            console.log(e1[i]);
+        }
+    }
+};
+arr_e();
